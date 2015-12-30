@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app = "app">
+<head>
+<title>Title of the document</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src = "js/app.js"></script>
+</head>
+
+<body ng-controller = "mainCtrl">
+{{test}}
+<a ui-sref="home">  <button>click to go home</button></a>
+<div ui-view></div>
+
+</body>
+
+</html>

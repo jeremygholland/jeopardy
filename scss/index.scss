@@ -1,0 +1,30 @@
+body{
+  color: blue;
+  text-align: center;
+}
+
+.contain{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .columns{
+    width: 30%;
+  }
+  .buttons{
+    width: 80%;
+    margin: auto;
+    height: 10vh;
+    vertical-align: middle;
+    h3{
+      margin-top: 5vh;
+      background-color: black;
+    }
+  }
+}
+.redNow{
+  h3{
+    color: red;
+  };
+}
