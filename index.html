@@ -5,12 +5,34 @@
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src = "js/app.js"></script>
+<script src = "js/script.js"></script>
 </head>
 
 <body ng-controller = "mainCtrl">
-{{test}}
-<a ui-sref="home">  <button>click to go home</button></a>
+<div class="containTop">
+
+<div class="scores">
+  <p class="firstScore"> Team 1: {{firstScore}} </p>
+  <p class="secondScore"> Team 2: {{secondScore}} </p>
+  <p class="thirdScore"> Team 3: {{thirdScore}}</p>
+  <p class="fourthScore"> Team 4: {{fourthScore}}</p>
+</div>
+
+<div class="start">
+<h4> How Many Teams are playing?</h4>
+<input type="number" name = "quantity" min="1" max= "4" placeholder = "1" ng-model = "teams">
+
+<button ng-click = "chooseTeams()"> submit</button>
+</div>
+
+<a ui-sref = "/home"></a><button ng-click = "reset()" class = "reset"> new game? </button></a>
+
+</div>
+
+
+
 <div ui-view></div>
 
 </body>
